@@ -1,0 +1,85 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 7%;
+    background: rgba(0, 0, 0, 0.7);
+    filter: drop-shadow(10px);
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.navbar {
+    margin-right: 12%; /* Traz a navbar para mais perto da logo */
+    margin-left: -1.5rem; /* Move a navbar ligeiramente para a esquerda */
+    display: flex;
+}
+
+
+.logo{
+    text-decoration: none; 
+    font-size: 3rem;
+    color:var(--main-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border: transparent;
+    background:transparent ;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+.navbar a{
+    text-decoration: none; 
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border: transparent;
+    background-color: transparent;
+
+}
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color) ;
+    background-color: transparent;
+    transform: scale(1.1);
+    border-bottom: 1px solid transparent;
+}
+
+
+
+@media(max-width:995px){
+    
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40;
+        border-left: 3px solid var(--main-color);
+        border-bottom: 3px solid var(--main-color);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem 3%;
+        background-color: var(--second-bg-color);
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        display: none;
+    }
+    .navbar.active{
+        display:block ;
+    }
+    .navbar button{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .navbar button:hover,
+    .navbar button.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid var(--main-color);
+    }
+}
